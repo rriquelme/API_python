@@ -1,0 +1,15 @@
+version: '3'
+services:
+  cherrypy_api:
+    build:
+      context: ./CherryPy
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+  
+  flask_api:
+    build:
+      context: ./Flask
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8081
